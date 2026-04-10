@@ -1,0 +1,194 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Xavier Wood Burning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0b0b0b;
+    color: #e5e5e5;
+}
+
+/* HEADER */
+header {
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* NAV */
+nav a {
+    margin: 0 12px;
+    color: #d4af37;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #d4af37;
+    color: black;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* PAYMENT */
+.payments a {
+    display: block;
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>GeekEmbers</h1>
+    <div class="subtitle">CUSTOM • HANDCRAFTED • UNIQUE</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Work</a>
+        <a href="#commissions">Commissions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+    <h2>About</h2>
+    <p>Hey! I’m Xavier, and I make custom wood-burning art. From signs to detailed designs, I can create just about anything you have in mind.
+
+
+
+I’m constantly growing in my craft and always give 100% effort into every piece, so you’ll get something I truly take pride in. I take commissions and also post original pieces for sale, so feel free to reach out if you want something custom or see something you like.
+
+
+
+If you’ve got questions, just message me on email or social media!</p>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+    <h2>Done So Far</h2>
+
+    <div class="gallery">
+        <img src="images/piece1.jpg" onclick="openImg(this.src)">
+        <img src="images/piece2.jpg" onclick="openImg(this.src)">
+        <img src="images/piece3.jpg" onclick="openImg(this.src)">
+        <img src="images/piece4.jpg" onclick="openImg(this.src)">
+        <img src="images/piece5.jpg" onclick="openImg(this.src)">
+        <img src="images/piece6.jpg" onclick="openImg(this.src)">
+        
+    </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeImg()">
+    <img id="lightbox-img">
+</div>
+
+<!-- COMMISSIONS -->
+<div id="commissions" class="section">
+    <h2>Commissions</h2>
+
+    <p>Custom pieces made to your idea. Pricing starts at $35+ depending on detail.</p>
+
+    <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc1X9NVHogC-1-y5Is8E4Hn9XKTMN8Jgtu0_yo-G3T9GUF3lg/viewform?usp=publish-editor">
+        Request a Commission
+    </a>
+
+    <div class="payments">
+        <h3>💳 Pay Here</h3>
+
+       
+        <a class="button" href="https://cash.app/$Xavier004" target="_blank">
+            Pay with CashApp
+        </a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Instagram: UniversalXavier</p>
+    <p>Email: Xavbrandle@gmail.com</p>
+</div>
+
+<script>
+function openImg(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImg() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
